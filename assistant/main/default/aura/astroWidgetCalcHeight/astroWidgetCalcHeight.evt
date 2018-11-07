@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="Fired from the AskAstroWidget component. Notify the astroWidgetContainer component to calculate its height.">
+    <aura:attribute name="posY" type="String"/>
+</aura:event>

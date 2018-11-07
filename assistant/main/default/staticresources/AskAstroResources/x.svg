@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>X</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="astroWidgetButton-open" transform="translate(-26.000000, -26.000000)" stroke="#FFFFFF">
+            <g id="X" transform="translate(26.000000, 26.000000)">
+                <path d="M0.384382386,0.840026835 L23.6156176,23.1599732" id="Line"></path>
+                <path d="M0.575191406,23.367137 L23.4248086,0.632863029" id="Line-Copy"></path>
+            </g>
+        </g>
+    </g>
+</svg>

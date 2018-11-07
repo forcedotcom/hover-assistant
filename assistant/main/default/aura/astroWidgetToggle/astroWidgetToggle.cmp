@@ -1,0 +1,11 @@
+<aura:component>
+    <aura:attribute name="isOpenStatus" type="String" default="CLOSED" />
+    <aura:attribute name="openUp" type="Boolean" default="true" />
+
+    <aura:registerEvent name="toggleEvent" type="c:astroWidgetToggleEvent" />
+    <aura:handler event="c:astroWidgetToggleEvent" action="{!c.handleToggleEvent}" />
+
+    <a onclick="{!c.handleClick}" alt="" draggable="false" class="widget-anchor-container">
+        <c:astroWidgetCircle openUp="{!v.openUp}" isOpen="{!v.isOpenStatus == 'OPEN'}"/>
+    </a>
+</aura:component>

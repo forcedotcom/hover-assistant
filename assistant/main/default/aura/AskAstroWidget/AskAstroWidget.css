@@ -1,0 +1,434 @@
+.THIS .widget {
+    position: fixed;
+    z-index: 9999;
+    opacity: 1;
+    width: 60px;
+    height: 60px;
+}
+
+.THIS .inline{
+    position: initial;
+    bottom: 0px;
+    right: 0px;
+    overflow: visible;
+    height: calc(82vh - 90px - 40px);
+    min-height: 160px;
+    float: right;
+}
+
+.THIS .staticGhost {
+    z-index: 9990;
+    position: fixed;
+    border: 2px dashed #0070d2;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    opacity: 0.4;
+    visibility: hidden;
+}
+
+.THIS .staticGhost.visible {
+    visibility: visible;
+}
+
+.THIS .staticGhost img {
+    width: 50px;
+    margin: 16px 0 0 10px;
+}
+
+@keyframes enterHead {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+
+.THIS .dragging {
+    cursor: move;
+    -ms-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    animation: enterHead 0.2s 1;
+    transform: rotate(-30deg);
+
+}
+/* Ask Astro Web */
+/* Color palette */
+/* Measurement variables */
+/* element z-index ordering from back to front*/
+/* Common vars */
+.THIS .astro-slds {
+    font-family: "Salesforce Sans", Arial, sans-serif;
+    /* Text styles */
+}
+
+.THIS .astro-slds body {
+    background-color: #efeee7;
+}
+
+.THIS .astro-slds span.required {
+    float: unset;
+}
+
+.THIS .astro-slds title {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.41;
+    text-align: left;
+    color: #213441;
+}
+
+.THIS .astro-slds .Title-White {
+    font-size: 16px;
+    text-align: left;
+    color: #fff;
+}
+
+.THIS .astro-slds .Link---Base {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.29;
+    text-align: left;
+    color: #44a7d1;
+}
+
+.THIS .astro-slds .DarkCaps {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #00396b;
+}
+
+.THIS .astro-slds .buttonLabel-light {
+    font-size: 14px;
+    text-align: center;
+    color: #f4f6f9;
+}
+
+.THIS .astro-slds .filterlist {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    color: #606e77;
+}
+
+.THIS .astro-slds .Card-base {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    color: #606e77;
+}
+
+.THIS .astro-slds .Light---Small {
+    font-size: 14px;
+    text-align: center;
+    color: #474747;
+}
+
+.THIS .astro-slds .Accordion-Title {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    color: #a8b7c7;
+}
+
+.THIS .astro-slds base {
+    font-size: 13px;
+    text-align: left;
+    color: #153059;
+}
+
+.THIS .astro-slds .Default {
+    font-size: 13px;
+    line-height: 1.62;
+    text-align: left;
+    color: #153059;
+}
+
+.THIS .astro-slds label {
+    font-size: 13px;
+    text-align: left;
+    color: #0070d2;
+}
+
+.THIS .astro-slds .tiles-description {
+    font-size: 12px;
+    text-align: left;
+    color: #54698d;
+}
+
+.THIS .astro-slds .highlight-text {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.THIS .compact .widget .widget-anchor-container:active {
+    cursor: move;
+}
+
+.THIS .compact .widget .widget-circle {
+    background-color: #4ab2dd;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    float: left;
+    clear: right;
+    height: 60px;
+    width: 60px;
+    outline: none;
+    position: fixed;
+}
+
+.THIS .compact .widget .widget-circle:hover {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.THIS .compact .widget .widget-circle:focus {
+    outline: none;
+}
+
+.THIS .compact .widget .widget-astro-head {
+    width: 50px;
+    margin: 16px 0 0 10px;
+}
+
+.THIS .compact .widget .slideInRight {
+    animation-name: slideInRight;
+    animation-duration: .7s;
+    animation-fill-mode: both;
+}
+
+.THIS .compact .widget .widget-close {
+    margin: 18px;
+    width: 24px;
+}
+
+.THIS .compact .widget.dragging .widget-circle:hover {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.THIS .compact {
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+.THIS .compact .bottomWhiteBox {
+    height: 30px;
+}
+
+.THIS .compact .widget.screenQuarter1 .widgetOverlay {
+    bottom: -75px;
+    right: 0;
+    position: relative;
+}
+
+.THIS .compact .widget.screenQuarter2 .widgetOverlay {
+    bottom: -75px;
+    right: 315px;
+    position: relative;
+}
+
+.THIS .compact .widget.screenQuarter3 .widgetOverlay {
+    bottom: 75px;
+    right: -315px;
+}
+
+.THIS .compact .widget.screenQuarter4 .widgetOverlay {
+    bottom: 75px;
+    right: 0;
+}
+
+.THIS .compact .widget.inline .widgetOverlay {
+    bottom: -75px;
+    right: 315px;
+    position: relative;
+}
+
+.THIS .compact .widget .widgetOverlay {
+    max-height: 590px;
+    height: calc(82vh - 90px - 40px);
+    min-height: 160px;
+    overflow: hidden;
+    position: absolute;
+    line-height: 1.5;
+}
+
+@media screen and (max-height: 620px) {
+    .THIS .compact .widget .widgetOverlay {
+        height: calc(79vh - 90px - 40px);
+    }
+}
+
+.THIS .compact .widget .widgetOverlay.open-left {
+    position: absolute;
+    top: 90px;
+    left: -315px;
+}
+
+.THIS .compact .widget .widgetOverlay.open-right {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+}
+
+.THIS .compact .widget .widgetOverlay.widget-OPEN {
+    animation: .3s ease-out 0s 1 fade-in;
+    width: 375px;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+}
+
+.THIS .compact .widget .widgetOverlay.widget-OPEN .container {
+    top: 0;
+    opacity: 100;
+    transition: top ease 70ms,opacity ease-in .2s;
+    -webkit-transition: top ease 70ms,opacity ease-in .2s;
+}
+
+.THIS .compact .widget .widgetOverlay.widget-CLOSED {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 1.5s,opacity 1.5s linear, height 1.5s;
+    -webkit-transition: visibility 0s linear 1.5s,opacity 1.5s linear, height 1.5s;
+    min-height: 0;
+}
+
+.THIS .compact .widget .widgetOverlay.widget-CLOSED .container {
+    transition: top ease 4000ms,opacity ease-in .1s;
+    -webkit-transition: top ease 4000ms,opacity ease-in .1s;
+}
+
+.THIS .compact .widget .widgetOverlay .container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    top: calc(82vh - 90px - 40px);
+    opacity: 0;
+    overflow: hidden;
+}
+
+.THIS .compact .widget .widgetOverlay .container .widgetWelcomeText {
+    width: 141px;
+    height: 28px;
+    font-size: 28px;
+    text-align: center;
+    color: #fff;
+    padding: 130px 122px 8px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.THIS .compact .widget.screenQuarter2 .widgetOverlay {
+    position: relative;
+}
+
+.THIS .compact .widget.inline .widgetOverlay {
+    position: relative;
+}
+
+.THIS .compact .widget .widgetOverlay {
+    overflow: hidden;
+    position: absolute;
+    line-height: 1.5;
+}
+
+.THIS .compact .widget .widgetOverlay.open-left {
+    position: absolute;
+    top: 90px;
+    left: -315px;
+}
+
+.THIS .compact .widget .widgetOverlay.open-right {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+}
+
+.THIS .compact .widget .widgetOverlay.widget-OPEN {
+    animation: .3s ease-out 0s 1 fade-in;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+}
+
+.THIS .compact .widget .widgetOverlay.widget-OPEN .container {
+    top: 0;
+    opacity: 100;
+    transition: top ease 70ms,opacity ease-in .2s;
+    -webkit-transition: top ease 70ms,opacity ease-in .2s;
+}
+
+.THIS .compact .widget .widgetOverlay.widget-CLOSED {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 1.5s,opacity 1.5s linear, height 1.5s;
+    -webkit-transition: visibility 0s linear 1.5s,opacity 1.5s linear, height 1.5s;
+    min-height: 0;
+}
+
+.THIS .compact .widget .widgetOverlay.widget-CLOSED .container {
+    transition: top ease 4000ms,opacity ease-in .1s;
+    -webkit-transition: top ease 4000ms,opacity ease-in .1s;
+}
+
+.THIS .compact .widget .widgetOverlay .container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.THIS .compact .widget .widgetOverlay.open-down.widget-OPEN .container {
+    transition: bottom ease 70ms,opacity ease-in .2s;
+    -webkit-transition: bottom ease 70ms,opacity ease-in .2s;
+}
+
+.THIS .compact .widget .widgetOverlay.open-down.widget-CLOSED .container {
+    transition: bottom ease 4000ms,opacity ease-in .1s;
+    -webkit-transition: bottom ease 4000ms,opacity ease-in .1s;
+}
+
+.THIS .compact .widget .widgetOverlay.open-down.widget-OPEN .container {
+    transition: bottom ease 70ms,opacity ease-in .2s;
+    -webkit-transition: bottom ease 70ms,opacity ease-in .2s;
+}
+
+.THIS .compact .widget .widgetOverlay.open-down.widget-CLOSED .container {
+    transition: bottom ease 4000ms,opacity ease-in .1s;
+    -webkit-transition: bottom ease 4000ms,opacity ease-in .1s;
+}

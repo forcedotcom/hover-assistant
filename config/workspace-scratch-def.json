@@ -1,0 +1,11 @@
+{
+  "country": "US",
+  "edition": "Developer",
+  "orgPreferences": {
+    "enabled": ["ChatterEnabled"],
+    "disabled": ["S1EncryptedStoragePref2"]
+  },
+  "orgName": "Lightning Assistant Scratch Org",
+  "adminEmail": "test@test.test",
+  "hasSampleData": "true"
+}

@@ -1,0 +1,17 @@
+<aura:component>
+    <aura:attribute name="widgetPosY" type="String" />
+
+    <aura:if isTrue="{! !v.openUp}">
+        <div class="open-down">
+            <c:astroWidgetToggle openUp="{!v.openUp}" />
+        </div>
+    </aura:if>
+
+    <aura:if isTrue="{! v.openUp}">
+        <c:astroWidgetToggle />
+    </aura:if>
+    <c:astroWidgetContainer openUp="{!v.openUp}" widgetPosY="{!v.widgetPosY}">
+        <!-- Place body cmp here -->
+    </c:astroWidgetContainer>
+
+</aura:component>

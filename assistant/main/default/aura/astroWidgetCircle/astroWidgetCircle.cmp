@@ -1,0 +1,15 @@
+<aura:component>
+    <aura:attribute name="isOpen" type="Boolean" />
+    <aura:attribute name="openUp" type="Boolean" />
+
+    <aura:handler event="c:astroWidgetToggleEvent" action="{!c.handleToggleEvent}" />
+
+    <div class="widget-circle" tabindex="-1" data-auth-click="canClick" data-is-child="false">
+        <aura:if isTrue="{!v.isOpen}">
+            <img class="widget-close" alt="" src="{!$Resource.AskAstroResources + '/x.svg'}" draggable="false" data-auth-click="canClick" data-is-child="true" />
+            <aura:set attribute="else">
+                <img class="widget-astro-head slideInRight" alt="" src="{!$Resource.AskAstroResources + '/astroHead.svg'}" draggable="false" data-auth-click="canClick" data-is-child="true" />
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

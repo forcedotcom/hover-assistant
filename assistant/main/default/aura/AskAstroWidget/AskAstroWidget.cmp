@@ -1,0 +1,43 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <!-- set oninit if we're in a console app -->
+    <aura:attribute name="isConsoleNavigation" type="Boolean" access="private" />
+    <!-- position of AskAstro -->
+    <aura:attribute name="posX" type="String" access="private" default="12" />
+    <aura:attribute name="posY" type="String" access="private" default="12" />
+    <!-- position of AskAstro staticGhost image -->
+    <aura:attribute name="posXGhost" type="String" access="private" default="12" />
+    <aura:attribute name="posYGhost" type="String" access="private" default="12" />
+    <!-- attributes which affect CSS -->
+    <aura:attribute name="isDragging" type="Boolean" access="private" default="false" />
+    <aura:attribute name="isPositioned" type="Boolean" access="private" default="false" />
+    <aura:attribute name="quarter" type="String" access="private" default="4" />
+    <aura:attribute name="isResizing" type="Boolean" access="private" default="false" />
+    <!-- tracking current open/closed state of the widget -->
+    <aura:attribute name="isOpen" type="Boolean" access="private" default="false" />
+
+    <lightning:workspaceAPI aura:id="workspace" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="aura:locationChange" action="{!c.locationChange}" />
+    <aura:handler event="lightning:tabFocused" action="{! c.onTabFocused }" />
+
+    <aura:registerEvent name="toggleEvent" type="c:astroWidgetToggleEvent" />
+    <aura:registerEvent name="appCalcHeightEvent" type="c:astroWidgetCalcHeight" />
+
+    <div class='astro-slds'>
+        <div class="compact">
+            <!--this is added so the widget is not overlapping content when the user scrolls to the bottom of the page-->
+            <div class='bottomWhiteBox' />
+
+            <div class="{! 'staticGhost' + if(v.isDragging, ' visible', '')}" style="{!v.isPositioned == false ? 'right:' + v.posX + 'px;bottom:' + v.posY + 'px;' : 'left:' + v.posXGhost + 'px;top:' + v.posYGhost + 'px;'}">
+                <img src="{!$Resource.AskAstroResources + '/astroHead.svg'}" draggable="false" />
+            </div>
+
+            <!-- Astro widget -->
+            <div aura:id="widget" class="{! 'widget' + if(v.isDragging,' dragging','') + ' screenQuarter' + v.quarter}" draggable="true" onmousedown="{!c.handleMouseDown}" ondragstart="{!c.handleDragStart}" style="{!v.isPositioned == false ? 'right:' + v.posX + 'px;bottom:' + v.posY + 'px;' : 'left:' + v.posX + 'px;top:' + v.posY + 'px;'}">
+                <c:astroWidgetIndex widgetPosY="{! v.posY}"/>
+            </div>
+
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="This event will toggle the status value in astroWidgetContainer component">
+    <aura:attribute name="openStatus" type="String" />
+</aura:event>

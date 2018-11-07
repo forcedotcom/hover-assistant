@@ -1,0 +1,11 @@
+{
+  "packageDirectories": [
+    {
+      "path" : "assistant",
+      "default": true
+    }
+  ],
+  "sourceApiVersion" : "43.0",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "oauthLocalPort" : "1717"
+}
