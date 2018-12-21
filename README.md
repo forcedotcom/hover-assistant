@@ -1,6 +1,8 @@
 # Lightning Assistant
 A draggable, floating, Lightning container for embedding into Lightning pages and applications.
 
+![Hover Assistant Demo](hover-assistant-demo.gif)
+
 ## Developer Guide
 
 ### Setup your Development Environment
